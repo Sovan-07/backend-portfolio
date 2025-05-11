@@ -26,7 +26,7 @@ const msgSchema = new mongoose.Schema({
 })
 const Msg = mongoose.model('msg' , msgSchema)
 
-app.get('/msg' , async()=>{
+app.get('/msg' , async(req,res)=>{
     console.log("backend call");
     const name = req.query.name;
     const mail = req.query.mail;
